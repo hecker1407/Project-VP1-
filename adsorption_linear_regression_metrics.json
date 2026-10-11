@@ -1,0 +1,57 @@
+{
+  "input_workbook": "ExpData.xlsx",
+  "target_column": "qe_mgg",
+  "target_units": "mg/g",
+  "features": [
+    "BET_m2g",
+    "pore_vol_cm3g",
+    "pH_pzc",
+    "C0_mgL",
+    "pH",
+    "dose_gL",
+    "contact_time_min",
+    "temp_K"
+  ],
+  "excluded_leakage_risk_columns": [
+    "Ce_mgL"
+  ],
+  "excluded_high_missingness_columns": [
+    "C_pct",
+    "H_pct",
+    "O_pct",
+    "N_pct"
+  ],
+  "rows_in_source_workbook": 488,
+  "exact_duplicate_extra_copies_detected": 44,
+  "exact_duplicates_removed_from_model": 44,
+  "rows_used_for_model": 444,
+  "rows_train": 355,
+  "rows_test": 89,
+  "pH_interval_rows_midpoint_approximated": 46,
+  "mass_balance_rows_checked": 291,
+  "mass_balance_rows_with_abs_difference_over_2_mg_g": 5,
+  "maximum_mass_balance_absolute_difference_mg_g": 2.8000000000000114,
+  "random_state": 42,
+  "test_size": 0.2,
+  "validation_note": "Row-wise random split only; source/material identifiers are absent, so test performance is preliminary and may be optimistic.",
+  "cross_validation_train_only": {
+    "MAE_mean_mg_g": 176.92646662924528,
+    "MAE_sd_mg_g": 14.894582248888891,
+    "RMSE_mean_mg_g": 242.4323013616833,
+    "RMSE_sd_mg_g": 29.097856634583362,
+    "R2_mean": 0.5416796736614813,
+    "R2_sd": 0.12968703312598698
+  },
+  "holdout_test_metrics": {
+    "median_baseline": {
+      "MAE (mg/g)": 204.5960146067416,
+      "RMSE (mg/g)": 445.2839763187347,
+      "R\u00b2": -0.09060426962182788
+    },
+    "linear_regression": {
+      "MAE (mg/g)": 166.2376866159022,
+      "RMSE (mg/g)": 226.4265787833584,
+      "R\u00b2": 0.7180008051299451
+    }
+  }
+}
